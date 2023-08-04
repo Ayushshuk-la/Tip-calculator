@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    /* background-color: hsl(189, 41%, 97%); */
+    font-size: 24px;
+    font-family: Space Mono;
+    font-weight: 700;
+    }
+    body{
+        background-color:  hsl(185, 41%, 84%);
+    }
+    .side{
+        background-color: hsl(183, 100%, 15%);
+    }
+    .container{
+        background-color: hsl(189, 41%, 97%);
+    }
+    .tippercen{
+        background-color:hsl(183, 100%, 15%) ;
+    }
+    .tippercen:hover{
+        background-color:hsl(172, 67%, 45%) ;
+    }
+    .txt-color{
+        color: hsl(172, 67%, 45%);
+    }
+    .tx-color{
+        color: white;
+    }
+    .back{
+        background-color:hsl(172, 67%, 45%) ;
+    }
+    .back:hover{
+        color: white;
+    }
+    .t-color{
+        color: hsl(184, 14%, 56%);
+    }
