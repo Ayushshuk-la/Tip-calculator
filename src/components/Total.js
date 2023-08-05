@@ -33,14 +33,17 @@ export default function Total(props) {
   const [tipamount,settipamount]=useState(0);
 
   const amt = ()=>{
-      
-    settipamount(((bill*tipper)/100)/person);
-    settotal(bill/person +tipamount );
+      let tamo=(((bill*tipper)/100)/person);
+      let num=Math.round(tamo)
+     let tot=Math.round(bill/person)
+ 
+    settipamount(num);
+    settotal(tot +num );
     
   }
-  setTimeout(() => {
-    settotal(bill/person +tipamount );
-  }, 1000);
+  // setTimeout(() => {
+  //   settotal(bill/person +tipamount );
+  // }, 1000);
 
   const reset= ()=>{
     setbill('');
@@ -85,22 +88,22 @@ export default function Total(props) {
                 <div className="row m-2">
                     <span className="t-color">Number of person</span>
                     <div className="input-group">
-                        <span className="input-group-text "><img src="./icon-person.svg" alt=""/></span>
+                        <span className="input-group-text "><img src="" alt=""/>p</span>
                         <input  className="form-control txt-color " value={person} onChange={countofperson} id="person" type="number"/>
                     </div>
                 </div>
             </div>
             <div className="side col-md-6 p-2 rounded-3">
                 <div className="row tipamount mt-3">
-                    <span className="h3 text-white m-0">Tip amount <span className="amount p-3 fs-4" id="result1">$ {tipamount} </span></span><span className="fs-6 fw-normal t-color">/person</span>
+                    <span className="h3 text-white m-0">Tip amount <span className="amount p-3  fs-5 " id="result1">${tipamount }  </span></span><span className="fs-6 fw-normal t-color">/person</span>
                 </div>
                 <div className="row mt-3">
-                    <span className="h3 text-white m-0">Total<span className="tamount p-5 fs-4" id="result2">$ {total} </span></span> <span className="fs-6 fw-normal t-color">/person</span>
+                    <span className="h3 text-white m-0">Total<span className="tamount p-5  fs-5 " id="result2">${total }  </span></span><span className="fs-6 fw-normal t-color">/person</span>
                                 
                 </div>
                 <div className="row mt-4">
-                    <button type="button" className="btn border-2 w-auto p-3 m-3 h-50 m-auto back " onClick={reset}>RESET</button>
-                    <button type="button" className="btn border-2 w-auto p-3 m-3 h-50 m-auto back my-2" onClick={amt}>SUBMIT</button>
+                    <button type="button" className="btn border-2 w-auto p-3 m-3  h-25 m-auto back " onClick={reset}>RESET</button>
+                    <button type="button" className="btn border-2 w-auto p-3 m-3  h-25 m-auto back my-2" onClick={amt}>SUBMIT</button>
                 </div>
             </div>
         </div>
@@ -111,5 +114,5 @@ export default function Total(props) {
 }
 Total.propTypes={
     billname: PropTypes.string,
-
+    
 }
